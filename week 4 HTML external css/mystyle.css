@@ -20,6 +20,7 @@ tr, td {
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
+  text-align:center;
 }
 tr:nth-child(0){
 	background-color:lightgray;
@@ -34,6 +35,7 @@ table{
 	border:2px solid red;
 	margin-left: auto;
     margin-right: auto;
+	width:90%;
 }
 .myDiv {
   border: 5px outset red;
