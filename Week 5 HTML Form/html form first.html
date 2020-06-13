@@ -1,0 +1,106 @@
+<html>
+
+<head>
+  <title>My First HTML Form</title>
+  <style>
+    table.centre{
+	  margin-left: auto;
+      margin-right: auto;
+	}
+  </style>
+  <script>
+    function calcfees(){
+	   var first=document.getElementById("firstname").value;
+	   var last=document.getElementById("lastname").value;
+	   var username=first+" "+last;
+	   var subject=document.getElementById("subject").value;
+	   var feepersub=document.getElementById("fee").value;
+	   var totalfees=feepersub*subject;
+	   
+	   document.getElementById("receipt").innerHTML="<h2>Receipt:<br></br>Registered Successfully.</h2>";
+	   document.getElementById("receipt").innerHTML+="<p>"+username.toUpperCase()+"</p>";
+	   document.getElementById("receipt").innerHTML+="<p>Subject registered: "+subject+"</p>";
+	   document.getElementById("receipt").innerHTML+="<p>Total fees to be paid: Rs. "+totalfees+"</p>";
+	   
+	}
+	function validatefirstname(){
+	   var fname=document.getElementById("firstname").value;
+	   var pfirst=/^[a-zA-Z\ ]{2,20}$/;
+	   
+	   if(pfirst.test(fname)){
+	     document.getElementById("firstnamespan").style.color="darkgreen";
+		 document.getElementById("firstnamespan").innerHTML="<strong>Valid</strong>";
+	   }
+	   else{
+	     document.getElementById("firstnamespan").style.color="darkred";
+		 document.getElementById("firstnamespan").innerHTML="<strong>Please enter between 2 and 20 characters</strong>";
+	   }
+	}
+	function validatelastname(){
+	   var lname=document.getElementById("lastname").value;
+	   var plast=/^[a-zA-Z]{2,10}$/;
+	   
+	   if(plast.test(lname)){
+	     document.getElementById("lastnamespan").style.color="darkgreen";
+		 document.getElementById("lastnamespan").innerHTML="<strong>Valid</strong>";
+	   }
+	   else{
+	     document.getElementById("lastnamespan").style.color="darkred";
+		 document.getElementById("lastnamespan").innerHTML="<strong>Please enter between 2 and 10 characters</strong>";
+	   }
+	}
+	function validatesubject(){
+	   var sub=document.getElementById("subject").value;
+	   
+	   if(sub>=2 && sub<=10){
+	     document.getElementById("subjectspan").style.color="darkgreen";
+		 document.getElementById("subjectspan").innerHTML="<strong>Valid</strong>";
+	   }
+	   else{
+	     document.getElementById("subjectspan").style.color="darkred";
+		 document.getElementById("subjectspan").innerHTML="<strong>Please enter between 2 and 10 Subjects</strong>";
+	   }
+	}
+  </script>
+</head>
+
+<body style="background-color:lightgray">
+  <div style="border: 5px outset red;background-color: lightblue;">
+  <br></br>
+  <h1 style="text-align:center">STUDENT EXAM REGISTRATION</h1>
+  <form>
+    <table class="centre">
+	  <tr>
+	    <td style="text-align:right;">First Name   &nbsp;</td>
+		<td><input id="firstname" type="text" onblur="validatefirstname()"></input></td>
+		<td><span id="firstnamespan">&nbsp;</span></td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right;">Last Name   &nbsp;</td>
+		<td><input id="lastname" type="text" onblur="validatelastname()"></input></td>
+		<td><p id="lastnamespan"></p></td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right;">Date of birth   &nbsp;</td>
+		<td><input type="text" placeholder="dd-mm-yyyy"></input></td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right;">Subjects Qualified   &nbsp;</td>
+		<td><input id="subject" type="number" onblur="validatesubject()"></input></td>
+		<td><p id="subjectspan"></p></td>
+	  </tr>
+	  <tr>
+	    <td style="text-align:right;">Fee per Subject   &nbsp;</td>
+		<td><input id="fee" type="text" value="500" readonly></input></td>
+		<td><span>INR</span></td>
+	  </tr>
+	  
+	</table>
+  </form>
+  <button style="background-color:yellow;margin-left:auto;margin-right:auto;display:block;margin-bottom:0%" class="button"  onclick="calcfees()">SUBMIT</button>
+  </br></br></br>
+  </div>
+  <span id="receipt">&nbsp;</span>
+</body>
+
+</html>
