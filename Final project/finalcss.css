@@ -5,3 +5,13 @@ h1{
 	color:white;
 	text-align:center;
 }
+form{
+	margin: 300px;
+    margin-top: 15px;
+	background-color:RGB(227,24,55);
+	text-align:center;
+	display:block;
+}
+td{
+	color:white;
+}
