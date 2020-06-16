@@ -6,12 +6,13 @@ h1{
 	text-align:center;
 }
 form{
-	margin: 300px;
+	margin: 295px;
     margin-top: 15px;
+	margin-bottom:15px;
 	background-color:RGB(227,24,55);
-	text-align:center;
-	display:block;
+	
 }
-td{
+td,th{
+	text-align:left;
 	color:white;
 }
