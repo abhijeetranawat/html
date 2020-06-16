@@ -16,7 +16,7 @@
   <tr>
     </br>
     <th>   &nbsp;Customer's Name:  &nbsp;</th>
-	<td><input></input></td>
+	<td><input id="name"></input></td>
   </tr>
   <tr>
     <th>   &nbspPhone No.:  &nbsp;</th>
@@ -27,13 +27,13 @@
     <th><label>  &nbspSelect pizza base:</label></th>
   </tr>
   <tr><td>
-  <input type="radio" id="pizzabase" name="base" checked >
+  <input type="radio" id="pizzabase1" name="base" checked >
   <label >Fresh Pan (Rs. 120)</label></td>
   <td>
-  <input type="radio" id="pizzabase" name="base">
+  <input type="radio" id="pizzabase2" name="base">
   <label ></label>Hand Tosses (Rs. 100)</td>
   <td>
-  <input type="radio" id="pizzabase" name="base">
+  <input type="radio" id="pizzabase3" name="base">
   <label >Cheese Burst (Rs. 200)</label></td>
   </tr>
   <tr>
@@ -41,31 +41,31 @@
   </tr>
   <tr>
     <td>
-	  <input type="checkbox" id="pizzatopping" name="topping">
+	  <input type="checkbox" id="pizzatopping1" name="topping">
       <label>Onion (Rs 50)</label>
 	</td>
 	<td>
-	  <input type="checkbox" id="pizzatopping" name="topping">
+	  <input type="checkbox" id="pizzatopping2" name="topping">
       <label> Tomato (Rs 50)</label>
 	</td>
   </tr>
   <tr>
     <td>
-	  <input type="checkbox" id="pizzatopping" name="topping">
+	  <input type="checkbox" id="pizzatopping3" name="topping">
       <label>Cheese (Rs 80)</label>
 	</td>
 	<td>
-	  <input type="checkbox" id="pizzatopping" name="topping">
+	  <input type="checkbox" id="pizzatopping4" name="topping">
       <label> Cheese Overloaded (Rs 120)</label>
 	</td>
   </tr>
   <tr>
     <td>
-	  <input type="checkbox" id="pizzatopping" name="topping">
+	  <input type="checkbox" id="pizzatopping5" name="topping">
       <label>Paneer (Rs 90)</label>
 	</td>
 	<td>
-	  <input type="checkbox" id="pizzatopping" name="topping">
+	  <input type="checkbox" id="pizzatopping6" name="topping">
       <label>Chicken (Rs 120)</label>
 	</td>
   </tr>
@@ -74,21 +74,21 @@
   </tr>
   <tr>
     <td>
-	  <input type="radio" id="dip" name="dip">
+	  <input type="radio" id="dip1" name="dip">
       <label>Cheese Dip</label>
 	</td>
 	<td>
-	  <input type="radio" id="dip" name="dip">
+	  <input type="radio" id="dip2" name="dip">
       <label>Mayonese</label>
 	</td>
 	<td>
-	  <input type="radio" id="dip" name="dip">
+	  <input type="radio" id="dip3" name="dip">
       <label>Tandoori Mayonese</label>
 	</td>
   </tr>
   <tr>
     <th>   &nbspAddress:  &nbsp;</th>
-	<td  colspan="2" rowspan="2"><textarea rows="2" cols="60"></textarea></td>
+	<td  colspan="2" rowspan="2" ><textarea rows="2" cols="60" ></textarea></td>
   </tr>
   <tr>
     <td>
@@ -107,7 +107,7 @@
   
  </table>
 </form>
-  <button style="background-color:yellow;margin-left:auto;margin-right:auto;display:block;" class="button"  onclick="calcTotal()">ORDER NOW</button>
+  <button style="background-color:yellow;margin-left:auto;margin-right:auto;display:block;" class="button"  onclick="calctotal()">ORDER NOW</button>
   </br></br></br>
   <span id="receipt">&nbsp;</span>
 </body>
